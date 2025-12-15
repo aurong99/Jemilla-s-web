@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Shop </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Welcome Modal -->
+    <div id="welcome-modal" class="welcome-modal">
+        <div class="welcome-content">
+            <div class="welcome-logo">🌸</div>
+            <h1 class="welcome-title">Welcome to Jemilla's Skin Care</h1>
+            <p class="welcome-subtitle">Discover premium perfumes, body sprays, and oils for your beauty routine</p>
+            <div class="welcome-features">
+                <div class="feature-item">
+                    <span class="feature-icon">✨</span>
+                    <span>Premium Quality</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">🚚</span>
+                    <span>Fast Delivery</span>
+                </div>
+                <div class="feature-item">
+                    <span class="feature-icon">💳</span>
+                    <span>Secure Payment</span>
+                </div>
+            </div>
+            <button class="welcome-btn" id="enter-site">Explore Our Collection</button>
+        </div>
+    </div>
+
+  <header class="site-header">
+    <div class="header-container">
+        <nav class="nav-bar">
+            <div class="logo">JEMILLA'S SKIN CARE</div>
+            
+            <div class="search-container">
+                <input type="text" id="product-search" placeholder="Search for perfumes, oils, or sprays...">
+                <button id="search-button" aria-label="Search">
+                    🔍
+                </button>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#product-listing" class="active">Shop</a></li>
+                <li><a href="#" id="contact-link">Contact</a></li>
+                <li><a href="#" id="about-link">About</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="auth-button" id="signin-button">Sign In / Register</button>
+                <div class="cart-icon">🛒 (<span id="cart-count">0</span>)</div>
+                <div class="wishlist-icon">❤️ (<span id="wishlist-count">0</span>)</div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- Promotions Section -->
+<section class="promotions-section">
+    <div class="promotions-container">
+        <div class="promo-hero">
+            <div class="promo-content">
+                <h1>✨ Exclusive Offers</h1>
+                <p>Discover our premium collection with special discounts</p>
+                <div class="promo-highlights">
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🎁</span>
+                        <span>Free Shipping on Orders Over $50</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">💎</span>
+                        <span>20% Off First Purchase</span>
+                    </div>
+                    <div class="highlight-item">
+                        <span class="highlight-icon">🌟</span>
+                        <span>Limited Time: Buy 2 Get 1 Free</span>
+                    </div>
+                </div>
+                <button class="promo-btn" onclick="document.querySelector('a[href=&#34;#product-listing&#34;]').click()">Shop Now</button>
+            </div>
+            <div class="promo-image">
+                <img src="image 3.jpg" alt="Featured Product">
+                <div class="promo-badge">NEW</div>
+            </div>
+        </div>
+        
+        <div class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="featured-grid">
+                <div class="featured-card">
+                    <div class="discount-badge">-30%</div>
+                    <img src="image 4.jpg" alt="Luxury Scent">
+                    <h3>Luxury Scent</h3>
+                    <div class="price">
+                        <span class="original-price">$120.00</span>
+                        <span class="sale-price">$84.00</span>
+                    </div>
+                    <button class="featured-btn">Add to Cart</button>
+                </div>
+                <div class="featured-card">
+                    <div class="discount-badge">HOT</div>
+                    <img src="image 5.jpg" alt="Travel Pack">
+                    <h3>Travel Pack</h3>
+                    <p class="price">$25.00</p>
+                    <button class="featured-btn">Add to Cart</button>
+                </div>
+                <div class="featured-card">
+                    <div class="discount-badge">-15%</div>
+                    <img src="image 6.jpg" alt="Body Spray">
+                    <h3>Premium Body Spray</h3>
+                    <div class="price">
+                        <span class="original-price">$75.00</span>
+                        <span class="sale-price">$63.75</span>
+                    </div>
+                    <button class="featured-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <main class="shop-container">
+
+        <aside class="sidebar">
+            <h3>Product Categories</h3>
+            <ul>
+                <li><a href="#">Perfumes</a></li>
+                <li><a href="#">Body Sprays</a></li>
+                <li><a href="#">Oils</a></li>
+                <li><a href="#">New Arrivals</a></li>
+            </ul>
+
+            <h3>Filter by Price</h3>
+            <div class="price-filter">[Price Slider Placeholder]</div>
+        </aside>
+
+        <section class="product-listing" id="product-listing">
+            <h2>Shop All Products</h2>
+
+
+
+
+
+
+
+
+
+
+            <div class="toolbar">
+                <span class="product-count">Showing 1–8 of 16 results</span>
+                <select class="sort-dropdown">
+                    <option>Default Sorting</option>
+                    <option>Sort by Price: Low to High</option>
+                    <option>Sort by Price: High to Low</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card" data-category="Perfumes">
+                    <img src="image 2.jpg" alt="OLAY" class="product-image">
+                    <h4 class="product-title">OLAY</h4>
+                    <p class="product-price">$50.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+                <div class="product-card" data-category="Perfumes">
+                    <img src="image 3.jpg" alt="VC" class="product-image">
+                    <h4 class="product-title">VC</h4>
+                    <p class="product-price">$75.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+                 <div class="product-card" data-category="Body Sprays">
+                    <img src="image 4.jpg" alt="Skin Aqua" class="product-image">
+                    <h4 class="product-title">Skin Aqua</h4>
+                    <p class="product-price">$35.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Oils">
+                    <img src="image 5.jpg" alt="Ceramide" class="product-image">
+                    <h4 class="product-title">Ceramide</h4>
+                    <p class="product-price">$35.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="Oils">
+                    <img src="vaseline 2.jpg" alt="Vaseline" class="product-image">
+                    <h4 class="product-title">Vaseline</h4>
+                    <p class="product-price">$35.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                 <div class="product-card" data-category="New Arrivals">
+                    <img src="image 7.jpg" alt="Aloe Vera" class="product-image">
+                    <h4 class="product-title">Aloe Vera</h4>
+                    <p class="product-price">$35.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="image 6.jpg" alt="Anua 10+" class="product-image">
+                    <h4 class="product-title">Anua 10+</h4>
+                    <p class="product-price">$60.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Body Sprays">
+                    <img src="facial tonic.jpg" alt="Facial Tonic" class="product-image">
+                    <h4 class="product-title">Facial Tonic</h4>
+                    <p class="product-price">$45.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Oils">
+                    <img src="skin sucess.jpg" alt="Skin Success" class="product-image">
+                    <h4 class="product-title">Skin Success</h4>
+                    <p class="product-price">$80.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="New Arrivals">
+                    <img src="Nivea.jpg" alt="Nivea Lotion" class="product-image">
+                    <h4 class="product-title">Nivea Lotion</h4>
+                    <p class="product-price">$55.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="Nivea 2.jpg" alt="Nivea Extra White" class="product-image">
+                    <h4 class="product-title">Nivea Extra White</h4>
+                    <p class="product-price">$40.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Body Sprays">
+                    <img src="Olay.jpg" alt="Olay" class="product-image">
+                    <h4 class="product-title">Olay</h4>
+                    <p class="product-price">$70.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="New Arrivals">
+                    <img src="Palmer's Shear Butter.jpg" alt="Palmer's Shear" class="product-image">
+                    <h4 class="product-title">Palmer's Shear</h4>
+                    <p class="product-price">$65.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Oils">
+                    <img src="Jergens.jpg" alt="Jergens" class="product-image">
+                    <h4 class="product-title">Jergens</h4>
+                    <p class="product-price">$30.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="wonder cream.jpg" alt="Wonder cream" class="product-image">
+                    <h4 class="product-title">Wonder cream</h4>
+                    <p class="product-price">$90.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Body Sprays">
+                    <img src="product 17.jpg" alt="Rose Water Spray" class="product-image">
+                    <h4 class="product-title">Rose Water Spray</h4>
+                    <p class="product-price">$28.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="product 18.jpg" alt="Lavender Essence" class="product-image">
+                    <h4 class="product-title">Lavender Essence</h4>
+                    <p class="product-price">$48.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Oils">
+                    <img src="product 19.jpg" alt="Coconut Oil" class="product-image">
+                    <h4 class="product-title">Coconut Oil</h4>
+                    <p class="product-price">$32.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="New Arrivals">
+                    <img src="product 20.jpg" alt="Argan Oil Treatment" class="product-image">
+                    <h4 class="product-title">Argan Oil Treatment</h4>
+                    <p class="product-price">$58.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="product 21.jpg" alt="Floral Mist" class="product-image">
+                    <h4 class="product-title">Floral Mist</h4>
+                    <p class="product-price">$42.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Body Sprays">
+                    <img src="product 22.jpg" alt="Citrus Splash" class="product-image">
+                    <h4 class="product-title">Citrus Splash</h4>
+                    <p class="product-price">$35.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Oils">
+                    <img src="product 23.jpg" alt="Jojoba Oil Serum" class="product-image">
+                    <h4 class="product-title">Jojoba Oil Serum</h4>
+                    <p class="product-price">$52.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="New Arrivals">
+                    <img src="product 24.jpg" alt="Vitamin E Cream" class="product-image">
+                    <h4 class="product-title">Vitamin E Cream</h4>
+                    <p class="product-price">$46.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="product 25.jpg" alt="Vanilla Scent" class="product-image">
+                    <h4 class="product-title">Vanilla Scent</h4>
+                    <p class="product-price">$55.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Body Sprays">
+                    <img src="product 26.jpg" alt="Ocean Breeze Spray" class="product-image">
+                    <h4 class="product-title">Ocean Breeze Spray</h4>
+                    <p class="product-price">$38.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Oils">
+                    <img src="product 27.jpg" alt="Tea Tree Oil" class="product-image">
+                    <h4 class="product-title">Tea Tree Oil</h4>
+                    <p class="product-price">$36.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="New Arrivals">
+                    <img src="product 28.jpg" alt="Honey Mask" class="product-image">
+                    <h4 class="product-title">Honey Mask</h4>
+                    <p class="product-price">$44.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Perfumes">
+                    <img src="product 29.jpg" alt="Sandalwood Perfume" class="product-image">
+                    <h4 class="product-title">Sandalwood Perfume</h4>
+                    <p class="product-price">$72.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Body Sprays">
+                    <img src="product 30.jpg" alt="Cherry Blossom" class="product-image">
+                    <h4 class="product-title">Cherry Blossom</h4>
+                    <p class="product-price">$39.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="Oils">
+                    <img src="product 31.jpg" alt="Rosehip Oil" class="product-image">
+                    <h4 class="product-title">Rosehip Oil</h4>
+                    <p class="product-price">$54.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="add-to-wishlist">❤️ Wishlist</button>
+                    </div>
+                </div>
+
+                 
+                </div>
+
+            <div class="pagination">
+                <a href="#" class="page-link prev-page">&laquo;</a>
+                <a href="#" class="page-link current" data-page="1">1</a>
+                <a href="#" class="page-link" data-page="2">2</a>
+                <a href="#" class="page-link" data-page="3">3</a>
+                <a href="#" class="page-link next-page">&raquo;</a>
+            </div>
+
+
+
+
+
+
+            <div class="checkout-trigger-area">
+        <button id="go-to-checkout" class="add-to-cart">
+            View Cart & Proceed to Checkout
+        </button>
+    </div>
+
+</section>
+</main>
+
+<!-- About Section -->
+<section id="about-section" class="about-section hidden-section">
+    <div class="about-container">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images.jpg" alt="Aaron Amoah" class="profile-image">
+            </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p class="about-intro">Hi, I'm Jemilla, the founder of Jemilla's Skin Care.</p>
+                <p>With a passion for beauty and wellness, I created this platform to bring you the finest selection of perfumes, body sprays, and essential oils. My journey in the beauty industry has been driven by a commitment to quality, authenticity, and customer satisfaction.</p>
+                <p>At Jemilla's, we believe that everyone deserves to feel confident and beautiful. That's why we carefully curate our products to ensure they meet the highest standards of quality and efficacy.</p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Premium Products</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact-section" class="contact-section hidden-section">
+    <div class="contact-container">
+        <div class="contact-content">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">We're here to help! Reach out to us through any of the following channels.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>aaronamoah91@gmail.com</p>
+                    <a href="mailto:aaronamoah91@gmail.com" class="contact-link">Send Email</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone</h3>
+                    <p>0538672832<br>0551606432</p>
+                    <a href="tel:0538672832" class="contact-link">Call Now</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>Jemilla's Skin Care<br>Ghana</p>
+                    <span class="contact-link">Visit Us</span>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit" class="contact-submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Summary Page -->
+<section id="cart-summary-page" class="hidden-section">
+    <div class="cart-summary-container">
+        <div class="cart-summary-header">
+            <h2>🛒 Your Shopping Cart</h2>
+            <p>Review your items before checkout</p>
+        </div>
+
+        <div class="cart-content">
+            <!-- Cart Items List -->
+            <div class="cart-items-section">
+                <h3>Items in Cart</h3>
+                <div id="cart-items-display" class="cart-items-list">
+                    <!-- Items will be inserted here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Cart Summary -->
+            <div class="cart-summary-section">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal-display">$0.00</span>
+                </div>
+                <div class="summary-item">
+                    <span>Shipping:</span>
+                    <span id="shipping-display">Free</span>
+                </div>
+                <div class="summary-item">
+                    <span>Tax (10%):</span>
+                    <span id="tax-display">$0.00</span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span id="cart-total-display">$0.00</span>
+                </div>
+
+                <div class="cart-actions">
+                    <button id="continue-shopping-btn" class="continue-btn">Continue Shopping</button>
+                    <button id="proceed-checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="checkout-steps" class="hidden-section">
+    <div class="checkout-container">
+        <h2>Checkout Summary & Payment</h2>
+        
+        <div id="step-shipping" class="checkout-step active-step">
+            <h3>1. Delivery Information</h3>
+            <p>Enter your contact and delivery details.</p>
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email or Gmail Account" required>
+            <input type="tel" placeholder="Phone Number (e.g., Mobile Money Contact)" required>
+            <textarea placeholder="Delivery Address"></textarea>
+            
+            <button id="next-to-review" class="checkout-next-btn">
+                Next: Review Order
+            </button>
+        </div>
+
+        <div id="step-review" class="checkout-step">
+            <h3>2. Review Your Order</h3>
+            <div id="order-summary-display">
+                <p>Your cart items will appear here...</p>
+            </div>
+            <p class="order-total">Order Total: <span id="final-total">$0.00</span></p>
+            
+            <button id="next-to-payment" class="checkout-next-btn">
+                Next: Select Payment Method
+            </button>
+        </div>
+
+        <div id="step-payment" class="checkout-step">
+            <h3>3. Select Payment Method</h3>
+            <p>Choose how you would like to complete your purchase.</p>
+
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment_method" value="mobile_money" checked> 
+                    **Mobile Money (Momo)** <small> (Instant, secure online payment)</small>
+                </label>
+                <label>
+                    <input type="radio" name="payment_method" value="pay_on_delivery"> 
+                    **Pay Upon Delivery** <small> (Cash or MoMo accepted upon receipt)</small>
+                </label>
+                </div>
+
+            <button id="proceed-to-final-payment" class="checkout-next-btn final-step-btn">
+                Confirm Order & Pay Now/Later
+            </button>
+        </div>
+
+    </div>
+</section>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <p>&copy; 2024 Jemilla's Skin Care GH. All Rights Reserved.</p>
+            </div>
+            <div class="social-media">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-link facebook" data-platform="facebook" title="Visit our Facebook page">
+                        <span class="social-icon">📘</span>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    <a href="#" class="social-link tiktok" data-platform="tiktok" title="Follow us on TikTok">
+                        <span class="social-icon">🎵</span>
+                        <span class="social-text">TikTok</span>
+                    </a>
+                    <a href="#" class="social-link whatsapp" data-platform="whatsapp" title="Contact us on WhatsApp">
+                        <span class="social-icon">💬</span>
+                        <span class="social-text">WhatsApp</span>
+                    </a>
+                    <a href="#" class="social-link snapchat" data-platform="snapchat" title="Follow us on Snapchat">
+                        <span class="social-icon">👻</span>
+                        <span class="social-text">Snapchat</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div id="signin-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Sign In / Register</h2>
+            <div class="modal-tabs">
+                <button class="tab-button active" id="signin-tab">Sign In</button>
+                <button class="tab-button" id="register-tab">Register</button>
+            </div>
+            <div class="tab-content" id="signin-content">
+                <button class="google-btn">Sign in with Google</button>
+                <div class="divider">or</div>
+                <form id="signin-form">
+                    <input type="text" placeholder="Email or Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit" class="submit-btn">Sign In</button>
+                </form>
+            </div>
+            <div class="tab-content" id="register-content" style="display: none;">
+                <form id="register-form">
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="password" placeholder="Confirm Password" required>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="java2.js"></script>
+
+</body>
+</html>
